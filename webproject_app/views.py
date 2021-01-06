@@ -9,11 +9,6 @@ def home(request):
     return render(request, "webproject_app/home.html")
 
 
-def services(request):
-    """Services view."""
-    return render(request, "webproject_app/services.html")
-
-
 def store(request):
     """Store view."""
     return render(request, "webproject_app/store.html")

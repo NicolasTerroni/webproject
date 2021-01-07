@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Local
     'webproject_app',
     'services',
+    'blogs',
 ]
 
 MIDDLEWARE = [

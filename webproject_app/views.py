@@ -14,11 +14,6 @@ def store(request):
     return render(request, "webproject_app/store.html")
 
 
-def blogs(request):
-    """Blogs view."""
-    return render(request, "webproject_app/blogs.html")
-
-
 def contact(request):
     """Contact view."""
     return render(request, "webproject_app/contact.html")

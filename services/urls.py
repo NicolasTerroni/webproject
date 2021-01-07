@@ -1,4 +1,4 @@
-"""Webproject_app url configuration"""
+"""Services url configuration"""
 
 from django.urls import path
 

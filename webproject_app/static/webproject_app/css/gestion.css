@@ -277,3 +277,15 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.linkCategories{
+
+  color: white !important;
+
+  text-decoration: underline !important;
+  
+}
+
+.linkCategories:hover{
+  text-decoration: none !important;
+}

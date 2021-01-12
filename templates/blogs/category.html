@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
   {% load static %}
   {% block content %}
   {% for blog in blogs %}
@@ -9,7 +10,6 @@
         
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4" >
-            <!--<span class="section-heading-upper" style='text-align: right;'>{{ blog.categories }}</span>-->
             <span class="section-heading-lower">{{ blog.title }}</span></h2>
           <p class="mb-3">{{ blog.content }}</p>
 
@@ -30,11 +30,12 @@
 
           {% for category in blog.categories.all %}
 
-            &nbsp;&nbsp;<a href="{% url 'Category' category.id %}" class='linkCategories'>
-               {{ category.name }} 
-            </a>&nbsp;&nbsp;
+              &nbsp;&nbsp; {{ category.name }} &nbsp;&nbsp;
+
           {% endfor %}
         {% endfor %}
+        <a href="{% url 'Blogs' %}" class='linkCategories'>
+        Show all</a>
     </div>
   </section>
   {% endblock %}

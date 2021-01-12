@@ -24,12 +24,12 @@ class Category(models.Model):
 class Blog(models.Model):
     """Blog model."""
 
-    title=models.CharField(max_length=50)
-    content=models.CharField(max_length=50)
+    title=models.CharField(max_length=30)
+    content=models.CharField(max_length=150)
     image=models.ImageField(upload_to='blog',null=True,blank=True)
 
     author=models.ForeignKey(User, on_delete=models.CASCADE)
-    category=models.ManyToManyField(Category)
+    categories=models.ManyToManyField(Category)
 
     created=models.DateField(auto_now_add=True)
     updated=models.DateField(auto_now_add=True)

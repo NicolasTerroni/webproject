@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+  {% load static %}
+  {% block content %}
+
+    <div class='formContainer'>
+
+      {% if "valid" in request.GET %}
+        <p style="color: white;"> Message sent succesfully.</p>
+      {% endif %}
+
+
+      <form action="" method="POST">
+        <table  style="color: white; margin: 10px auto;">
+          {% csrf_token %}
+          {{ contact_form.as_table }}
+        </table>
+        <input type="submit" value="Submit" style="width: 150px;">
+
+
+      </form>
+    </div>
+  {% endblock %}

@@ -14,7 +14,3 @@ def store(request):
     return render(request, "webproject_app/store.html")
 
 
-def contact(request):
-    """Contact view."""
-    return render(request, "webproject_app/contact.html")
-

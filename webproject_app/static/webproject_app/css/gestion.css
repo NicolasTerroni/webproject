@@ -280,12 +280,21 @@ ul.errorlist{
 
 .linkCategories{
 
-  color: white !important;
-
-  text-decoration: underline !important;
+  color: white;
+  text-decoration: underline;
   
 }
 
 .linkCategories:hover{
+  color: rgb(144, 167, 146);
   text-decoration: none !important;
+}
+
+.formContainer{
+  text-align: center;
+  background-color: rgba(24, 64, 8);
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 10px 5px;
 }

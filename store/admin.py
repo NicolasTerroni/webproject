@@ -1,3 +1,6 @@
-from django.contrib import admin
+"""Product admin configuration"""
 
-# Register your models here.
+# Django
+from django.contrib import admin
+# Models
+from store.models import Product, ProductCategory

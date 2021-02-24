@@ -28,6 +28,8 @@ class Product(models.Model):
     image = models.ImageField(upload_to="store", null=True, blank=True)
     price = models.FloatField()
     aviable = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = "Product"

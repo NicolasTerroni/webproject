@@ -1,9 +1,13 @@
 """Store app views"""
 
+# Django
 from django.shortcuts import render
+# Models
+from store.models import Product
 
 def store(request):
     """Store view."""
-    return render(request, "store/store.html")
 
+    products = Product.objects.all()
 
+    return render(request, "store/store.html",{'products':products})

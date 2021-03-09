@@ -20,6 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     search_fields = ("id","name")
     list_filter = ("categories","aviable","created_at","updated_at")
+    list_display_links = ('name',)
 
 @admin.register(ProductCategory)
 class ProductCategoryAdmin(admin.ModelAdmin):

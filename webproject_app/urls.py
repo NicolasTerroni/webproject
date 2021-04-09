@@ -7,5 +7,5 @@ from webproject_app import views
 
 urlpatterns = [
 
-    path('',views.home, name='Home'),
+    path('',views.home, name='home'),
 ]

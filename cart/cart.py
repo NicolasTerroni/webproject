@@ -8,6 +8,8 @@ class Cart:
             cart = self.session['cart'] = {}
         else:
             self.cart = cart
+        
+        self.total = 0.0
 
 
     def add_product(self, product):
@@ -24,9 +26,10 @@ class Cart:
                 if key == str(product.id):
                     value['amount']=value['amount']+1
                     break
-        
+
+        self.total += int(product.price)
         self.save_cart()
-    
+
 
     def save_cart(self):
         self.session['cart'] = self.cart
@@ -49,9 +52,12 @@ class Cart:
                     if value['amount']<1:
                         self.delete_product(product)
                     break
+            self.total -= int(product.price)
             self.save_cart()
+            
 
 
     def empty_cart(self):
         self.session['cart'] = {}
+        self.total = 0.0
         self.session.modified = True

@@ -9,8 +9,6 @@ class Cart:
         else:
             self.cart = cart
         
-        self.total = 0.0
-
 
     def add_product(self, product):
         if str(product.id) not in self.cart.keys():
@@ -26,8 +24,6 @@ class Cart:
                 if key == str(product.id):
                     value['amount']=value['amount']+1
                     break
-
-        self.total += int(product.price)
         self.save_cart()
 
 
@@ -52,12 +48,10 @@ class Cart:
                     if value['amount']<1:
                         self.delete_product(product)
                     break
-            self.total -= int(product.price)
             self.save_cart()
             
 
 
     def empty_cart(self):
         self.session['cart'] = {}
-        self.total = 0.0
         self.session.modified = True

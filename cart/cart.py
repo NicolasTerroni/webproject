@@ -6,8 +6,7 @@ class Cart:
         cart = self.session.get('cart')
         if not cart:
             cart = self.session['cart'] = {}
-        else:
-            self.cart = cart
+        self.cart = cart
         
 
     def add_product(self, product):
@@ -17,7 +16,7 @@ class Cart:
                 'name':product.name,
                 'price':str(product.price),
                 'amount':1,
-                'image',product.image.url,
+                'image':product.image.url
             }
         else:
             for key, value in self.cart.items():
